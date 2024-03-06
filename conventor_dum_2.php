@@ -62,9 +62,9 @@
                     <div class="download-btn-menu">
                         <!-- Vertical buttons -->
                         <div class="vertical">
-                            <button type="button" class="button-46">Button 1</button>
-                            <button type="button" class="button-46">Button 2</button>
-                            <button type="button" class="button-46">Button 3</button>
+                            <button type="button" class="button-46">Download </button>
+                            <button type="button" class="button-46">Download HD</button>
+                            <button type="button" class="button-46">GET PREMIUM</button>
                         </div>
                     </div>
 
