@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                            <div id="previewContainer">
+                                <div id="previewContainer">
                                     <img id="previewImage2" />
                                     <button id="closeButton2" onclick="closePreview()">x</button>
                                 </div>
@@ -62,9 +62,21 @@
                     <div class="download-btn-menu">
                         <!-- Vertical buttons -->
                         <div class="vertical">
-                            <button type="button" class="button-46">Download </button>
-                            <button type="button" class="button-46">Download HD</button>
+                            <div class="btn-download-normal">
+                                <button type="button" class="button-46">Download </button>
+                                <p>Preview size: 432 * 578 </p>
+                            </div>
+                            <div class="btn-download-hd">
+                                <button type="button" class="button-46">Download HD</button>
+                            <p>Full size: 868 * 1160 </p>
+                            </div>
+                            <div class="btn-download-premium"> 
+
+                            <p>*Need Unlimited Cutouts?</p>
                             <button type="button" class="button-46">GET PREMIUM</button>
+                            </div>
+
+
                         </div>
                     </div>
 
@@ -84,21 +96,27 @@
 
 
 <style>
-    .vertical{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-}
+    .vertical p{
+        color: black
+        ;
+    }
+    .vertical {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
 
-.download-btn-menu {
-    height: 480px;
-    background: white;
-    border-radius: 20px;
-}
-   #closeButton1,#closeButton2 {
+    .download-btn-menu {
+        height: 480px;
+        background: white;
+        border-radius: 20px;
+    }
+
+    #closeButton1,
+    #closeButton2 {
         position: absolute;
         top: 32%;
         right: 36%;
