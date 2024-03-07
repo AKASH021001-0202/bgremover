@@ -143,7 +143,7 @@
  <!-- jquery -->
  <script src="assets/js/jquery-3.7.0.min.js"></script>
 
- 
+
  <!-- bootstrap five js -->
  <!--  <script src="assets/js/bootstrap.bundle.min.js"></script> -->
 
@@ -166,73 +166,73 @@
  <script src="assets/js/main.js"></script>
 
 
- 
+
 
  <script src="/assets/js/custom.js"></script>
 
-<script> function handleFileUpload() {
-        const fileInput = document.getElementById('fileInput_1');
-        const uploaddataSection = document.getElementById('uploaddata');
-        const responcedataSection = document.getElementById('responcedata');
-        const previewImage = document.getElementById('previewImage');
-        const previewImage2 = document.getElementById('previewImage2');
+ <script>
+     function handleFileUpload() {
+         const fileInput = document.getElementById('fileInput_1');
+         const uploaddataSection = document.getElementById('uploaddata');
+         const responcedataSection = document.getElementById('responcedata');
+         const previewImage = document.getElementById('previewImage');
+         const previewImage2 = document.getElementById('previewImage2');
 
-        // Check if files are selected to toggle section visibility
-        const files = fileInput.files;
-        if (files.length > 0) {
-            uploaddataSection.style.display = 'none';
-            responcedataSection.style.display = 'block';
+         // Check if files are selected to toggle section visibility
+         const files = fileInput.files;
+         if (files.length > 0) {
+             uploaddataSection.style.display = 'block';
+             responcedataSection.style.display = 'block';
 
-            // Display preview for the first image
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                previewImage.src = event.target.result;
-                previewImage2.src = event.target.result;
-            };
-            reader.readAsDataURL(files[0]);
+             // Display preview for the first image
+             const reader = new FileReader();
+             reader.onload = function(event) {
+                 previewImage.src = event.target.result;
+                 previewImage2.src = event.target.result;
+             };
+             reader.readAsDataURL(files[0]);
 
-            // Display preview for the second image with grayscale filter
-            previewImage2.src = reader.result;
+             // Display preview for the second image with grayscale filter
+             previewImage2.src = reader.result;
 
-            previewImage2.style.filter = 'saturate(300%)';
-        } else {
-            // Clear any existing preview
-            previewImage.removeAttribute('src');
-            previewImage2.removeAttribute('src');
-            // Hide response data section and display upload data section
-            uploaddataSection.style.display = 'block';
-            responcedataSection.style.display = 'none';
-        }
-    }
+             previewImage2.style.filter = 'saturate(300%)';
+         } else {
+             // Clear any existing preview
+             previewImage.removeAttribute('src');
+             previewImage2.removeAttribute('src');
+             // Hide response data section and display upload data section
+             uploaddataSection.style.display = 'block';
+             responcedataSection.style.display = 'none';
+         }
+     }
 
-    // Add event listener to the close button
-    // Define the event handler function
-function handleFileClose() {
-    const fileInput = document.getElementById('fileInput_1');
-    const uploaddataSection = document.getElementById('uploaddata');
-    const responcedataSection = document.getElementById('responcedata');
-    const previewImage = document.getElementById('previewImage');
-    const previewImage2 = document.getElementById('previewImage2');
+     // Add event listener to the close button
+     // Define the event handler function
+     function handleFileClose() {
+         const fileInput = document.getElementById('fileInput_1');
+         const uploaddataSection = document.getElementById('uploaddata');
+         const responcedataSection = document.getElementById('responcedata');
+         const previewImage = document.getElementById('previewImage');
+         const previewImage2 = document.getElementById('previewImage2');
 
-    // Clear image preview
-    previewImage.removeAttribute('src');
-    previewImage2.removeAttribute('src');
+         // Clear image preview
+         previewImage.removeAttribute('src');
+         previewImage2.removeAttribute('src');
 
-    // Clear selected file from file input
-    fileInput.value = '';
+         // Clear selected file from file input
+         fileInput.value = '';
 
-    // Hide response data section and display upload data section
-    uploaddataSection.style.display = 'block';
-    responcedataSection.style.display = 'none';
-}
+         // Hide response data section and display upload data section
+         uploaddataSection.style.display = 'block';
+         responcedataSection.style.display = 'none';
+     }
 
-// Add event listener to the first close button
-document.getElementById('closeButton1').addEventListener('click', handleFileClose);
+     // Add event listener to the first close button
+     document.getElementById('closeButton1').addEventListener('click', handleFileClose);
 
-// Add event listener to the second close button
-document.getElementById('closeButton2').addEventListener('click', handleFileClose);
-
-</script>
+     // Add event listener to the second close button
+     document.getElementById('closeButton2').addEventListener('click', handleFileClose);
+ </script>
  <script>
      $('.nav-tabs-dropdown').each(function(i, elm) {
 

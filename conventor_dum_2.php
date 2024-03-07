@@ -22,20 +22,22 @@
             </div>
         </div>
     </div>
-    <div class="updata" id="responcedata" style="display: none;">
+    <div class="updata pt-140 " id="responcedata" style="display: none;">
 
 
-        <div class="container">
+        <div class="container image-preview-tab">
             <div class="row icon_bg">
                 <div class="col-lg-8">
-                    <div class="image-preview-tab">
+                    <div class="image-tab-border">
 
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Before</button>
+                                <span class="hover-line"></span> <!-- Hover line -->
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">After</button>
+                                <span class="hover-line"></span> <!-- Hover line -->
                             </li>
 
                         </ul>
@@ -59,21 +61,30 @@
 
 
                 <div class="col-lg-4">
-                    <div class="download-btn-menu">
+                    <div class=" download-btn-menu  p-5">
                         <!-- Vertical buttons -->
                         <div class="vertical">
                             <div class="btn-download-normal">
-                                <button type="button" class="button-46">Download </button>
-                                <p>Preview size: 432 * 578 </p>
+                                <button type="button" class="button-10">Download </button>
+                                <p>Preview size: 432 * 578  <i class="fa fa-info-circle"></i></p>
                             </div>
                             <div class="btn-download-hd">
-                                <button type="button" class="button-46">Download HD</button>
-                            <p>Full size: 868 * 1160 </p>
+                                <button type="button" class="button-10">Download HD</button>
+                                <p>Full size: 868 * 1160 <i class="fa fa-info-circle"></i> </p>
                             </div>
-                            <div class="btn-download-premium"> 
+                            <div class="btn-download-premium">
 
-                            <p>*Need Unlimited Cutouts?</p>
-                            <button type="button" class="button-46">GET PREMIUM</button>
+                                <p>*Need Unlimited Cutouts?</p>
+                                <button type="button" class="button-10">GET PREMIUM</button>
+                            </div>
+
+                            <div class="like">
+                                <p>rate Us</p>
+                                <div class="emoji">
+                                    <img src="assets/images/like.png" alt="">
+                                    <img src="assets/images/dislike.png" alt="">
+                                    
+                                </div>
                             </div>
 
 
@@ -96,30 +107,125 @@
 
 
 <style>
-    .vertical p{
-        color: black
-        ;
+    #pills-tab li{
+        position: relative;
     }
+/* Styling for the hover line */
+.hover-line {
+    position: absolute;
+    height: 2px;
+    background-color: #397df6;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    width: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+}
+/* Styling for hover effect */
+.nav-link:hover + .hover-line {
+  width: 70%;
+}
+ul#pills-tab {
+
+    padding-left: 50px;
+    }
+/* Styling for active tab */
+.nav-link.active + .hover-line {
+  width: 70%;
+}
+
+#pills-tab button.nav-link.active{
+    color: #397df6  !important;
+    background-color: transparent  !important;
+  
+}
+button#pills-home-tab,button#pills-profile-tab {
+    color: #000  !important;
+    background-color: transparent  !important;
+  
+}
+    .emoji{
+        display: flex;
+    gap: 10px;
+    }
+    .emoji img{
+width: 40px;
+    }
+    button.button-10 {
+        width: 190px;
+    }
+
+    .like {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-10:hover {
+    color: white;
+}
+    /* CSS */
+    .button-10 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        border-radius: 6px;
+        border: none;
+
+        color: #fff;
+        background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+        background-origin: border-box;
+        box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-10:focus {
+        box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+        outline: 0;
+    }
+
+    #responcedata.show-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+
+    .vertical p {
+        color: black;
+    }
+
     .vertical {
         display: flex;
         flex-direction: column;
         height: 100%;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
     }
 
     .download-btn-menu {
         height: 480px;
         background: white;
-        border-radius: 20px;
+     
     }
 
     #closeButton1,
     #closeButton2 {
         position: absolute;
-        top: 32%;
-        right: 36%;
+        top: 77%;
+        right: 7%;
         padding: 2px 10px;
         background-color: #000;
         border: none;
@@ -145,6 +251,7 @@
         background: white;
         padding: 10px;
         border-radius: 20px;
+        box-shadow: 0px 0px 2px black;
     }
 
     div#previewContainer {
@@ -217,63 +324,7 @@
         min-width: 156px !important;
         padding: 14px 16px;
     }
-</style>
 
-<!-- <section style="padding-top: 150px;" id="response" style="display:none !important;">
-    <div class="container">
-        <h3>
-            After Upload
-        </h3>
-
-
-
-
-
-        <div class="row pt-50 pb-50 ">
-            <div class="container icon_bg">
-
-
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6 bg_shadow ">
-                    <button class="button-46" role="button" onclick="convertImages()">Convert Images</button>
-                    <div class="row counter_file " id="multiple_file_image">
-                        <div class="col-lg-12 align_cen ">
-
-
-                            <p class="text-dark" id="imageDetailsTableBody">
-
-                            </p>
-                        </div>
-
-                       
-                    </div>
-                    <div class="row counter_file_12">
-                        <div class="col-lg-8 align_cen ">
-                            <p class="text-dark">Total Uploaded Images: <span style="color: #000000 !important;" id="fileCount_1">0</span> </p>
-                        </div>
-
-                        <div class="col-lg-4 align_cen ">
-                            <button class="button-46 convertbtn" role="button" onclick="clearFileDetails()">Convert</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3"></div>
-            </div>
-        </div>
-
-
-
-    </div>
-
-
-</section> -->
-
-
-
-
-
-
-<style>
     .align_cen {
         display: flex;
         align-items: center;
@@ -375,13 +426,8 @@
             transition: 0.3s;
         }
     }
-</style>
-<style>
-    /*    .container {
-        width: 100vw;
 
-        position: relative;
-    } */
+
 
     .button-container {
         position: absolute;
@@ -410,11 +456,7 @@
         color: green;
     }
 
-    /* 
-.cancel_btn:hover {
-  background-color: rgb(0, 102, 204, 0.85);
-}
- */
+
     .cdownload {
         border: 2px solid #0066CC;
         background-color: white;
@@ -426,10 +468,7 @@
         color: #fff;
     }
 
-    /* .cdownload:hover {
-  background-color: rgb(0, 102, 204, 0.1);
-}
- */
+
     .mr-12 {
         margin-right: 12px;
     }
@@ -444,21 +483,7 @@
         align-items: center;
     }
 
-    /* .top-right {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  transform: translateX(100%);
-  transition: 1s;
-}
 
-.bottom-right {
-  position: absolute;  
-  bottom: 12px;
-  right: 0%;
-  transform: translateX(100%);
-  transition: 1s;
-} */
     /* CSS */
     .button-63 {
         align-items: center;
@@ -572,147 +597,6 @@
         display: none;
     }
 </style>
-
-<!-- script 1 -->
-<!--   <script>
-        function handleFileUpload() {
-            const fileInput = document.getElementById('fileInput');
-            const fileDetail = document.getElementById('fileDetail');
-            const fileSize = document.getElementById('fileSize');
-            const uploadedImage = document.getElementById('uploadedImage');
-
-            if (fileInput.files.length > 0) {
-                const file = fileInput.files[0];
-                const fileName = file.name;
-                const fileType = getFileType(fileName);
-                const formattedSize = formatFileSize(file.size);
-
-                // Display the file details and size
-                fileDetail.textContent = `File Name: ${fileName}`;
-                fileSize.textContent = `File Size: ${formattedSize}`;
-
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    uploadedImage.src = e.target.result;
-                    uploadedImage.style.display = 'block';
-                };
-
-                reader.readAsDataURL(file);
-            } else {
-                fileDetail.textContent = '';
-                fileSize.textContent = ''; // Clear file size
-                uploadedImage.style.display = 'none';
-            }
-        }
-
-        function getFileType(fileName) {
-            const parts = fileName.split('.');
-            if (parts.length > 1) {
-                return parts[parts.length - 1];
-            }
-            return 'N/A'; // No file extension found
-        }
-
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-
-            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-            const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-
-            return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
-        }
-    </script> -->
-
-<!-- script-2 -->
-
-<!-- <script>
-    function handleFileUpload() {
-        const fileInput = document.getElementById('fileInput_1');
-        const fileDetailsContainer = document.getElementById('imageDetailsTableBody');
-        const fileCount = document.getElementById('fileCount_1');
-
-        // Clear previous file details and file count
-        fileDetailsContainer.innerHTML = '';
-        fileCount.textContent = '0';
-
-        const files = fileInput.files;
-        const tableBody = document.createElement('tbody');
-
-        for (let i = 0; i < files.length; i++) {
-            const file = files[i];
-            const fileName = file.name;
-            const fileTypeValue = getFileType(fileName);
-            const formattedSize = formatFileSize(file.size);
-
-            // Create a new row for the table and add image details
-            const row = tableBody.insertRow();
-            row.innerHTML = `
-                <td>${fileName}</td>
-                <td >${formattedSize}  
-                  
-                </td>
-                <td >  <div class="align_cen">
-                        <p class="text-dark">OUTPUT : <button style="background-color: #000000; color:white;padding:10px;" data-toggle="modal" data-target="#Modalpop">Convert </button></p>
-                    </div></td>
-
-                    <td >
-                    <div class="align_cen">
-                       
-                        <p class="text-dark"> <a id="close_icon" onclick="removeRow(this)"><i style="font-size:24px" class="fab">&#10006;</i></a></p>
-                    </div></td>
-            `;
-        }
-
-        // Append the table body to the table
-        fileDetailsContainer.appendChild(tableBody);
-
-        // Update the file count
-        fileCount.textContent = files.length;
-    }
-
-    function getFileType(fileName) {
-        const parts = fileName.split('.');
-        if (parts.length > 1) {
-            return parts[parts.length - 1];
-        }
-        return 'N/A'; // No file extension found
-    }
-
-    function formatFileSize(bytes) {
-        if (bytes === 0) return '0 Bytes';
-
-        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(1024));
-
-        return parseFloat((bytes / Math.pow(1024, i)).toFixed(2)) + ' ' + sizes[i];
-    }
-
-    function removeRow(iconElement) {
-        // Get the closest row element and remove it
-        const row = iconElement.closest('tr');
-        row.remove();
-
-        // Update the file count
-        const fileCount = document.getElementById('fileCount_1');
-        fileCount.textContent = parseInt(fileCount.textContent) - 1;
-    }
-
-    function clearFileDetails() {
-        const fileInput = document.getElementById('fileInput_1');
-        const fileCount = document.getElementById('fileCount_1');
-        const fileDetailsContainer = document.getElementById('imageDetailsTableBody');
-
-        // Clear the file input, file details, and file count
-        fileInput.value = ''; // Clear the selected files
-        fileCount.textContent = '0'; // Reset the file count
-        fileDetailsContainer.innerHTML = ''; // Clear the displayed file details
-    }
-
-    function convertImages() {
-        // Implement your logic to convert images
-    }
-</script> -->
-
 
 
 <?php include('footer.php') ?>
