@@ -203,7 +203,7 @@
                     </div>
 
                     <div class="section__content-cta">
-                        <a href="register.html" class="btn btn_18">
+                        <a href="register.php" class="btn btn_18">
                             Start Remove Now
                         </a>
 
@@ -662,7 +662,7 @@
                                             </p>
                                         </div>
                                         <div class="section__content-cta">
-                                            <a href="contact-us.html" class="btn btn--secondary">
+                                            <a href="contact-us.php" class="btn btn--secondary">
                                                 request A Demo
                                             </a>
                                         </div>
@@ -699,7 +699,7 @@
                                             </p>
                                         </div>
                                         <div class="section__content-cta">
-                                            <a href="register.html" class="btn btn--secondary">
+                                            <a href="register.php" class="btn btn--secondary">
                                                 sign up now
                                             </a>
                                         </div>
@@ -726,7 +726,7 @@
                                             </p>
                                         </div>
                                         <div class="section__content-cta">
-                                            <a href="contact-us.html" class="btn btn--secondary">
+                                            <a href="contact-us.php" class="btn btn--secondary">
                                                 request A Demo
                                             </a>
                                         </div>
@@ -763,7 +763,7 @@
                                             </p>
                                         </div>
                                         <div class="section__content-cta">
-                                            <a href="register.html" class="btn btn--secondary">
+                                            <a href="register.php" class="btn btn--secondary">
                                                 sign up now
                                             </a>
                                         </div>
@@ -805,7 +805,7 @@
 
                         <div class="content">
                             <h5 class="h5">
-                                <a href="blog-single.html">Free Video Customizer</a>
+                                <a href="blog.php">Free Video Customizer</a>
                             </h5>
                             <p>
                                 Convert videos to visually striking cartoons in only a
@@ -821,12 +821,11 @@
 
                         <div class="content">
                             <h5 class="h5">
-                                <a href="blog-single.html">AI image compressed</a>
+                                <a href="blog.php">AI image compressed</a>
                             </h5>
-                            <p>
-                                Convert videos to visually striking cartoons in only a
-                                couple of clicks. 100% Automatically and FREE! Animate
-                                your video now!
+                            <p>Convert videos to visually striking cartoons in only a
+                               couple of clicks. 100% Automatically and FREE! Animate
+                               your video now!
                             </p>
                             <p><a href="#" class="btn_12">
                                     Try Now It For Free
@@ -837,7 +836,7 @@
 
                         <div class="content">
                             <h5 class="h5">
-                                <a href="blog-single.html">video object remover</a>
+                                <a href="blog.php">video object remover</a>
                             </h5>
                             <p>
                                 Convert videos to visually striking cartoons in only a
