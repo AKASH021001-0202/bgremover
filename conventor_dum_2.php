@@ -66,7 +66,7 @@
                         <div class="vertical">
                             <div class="btn-download-normal">
                                 <button type="button" class="button-10">Download </button>
-                                <p>Preview size: 432 * 578  <i class="fa fa-info-circle"></i></p>
+                                <p>Preview size: 432 * 578 <i class="fa fa-info-circle"></i></p>
                             </div>
                             <div class="btn-download-hd">
                                 <button type="button" class="button-10">Download HD</button>
@@ -82,8 +82,10 @@
                                 <p>rate Us</p>
                                 <div class="emoji">
                                     <img src="assets/images/like.png" alt="">
+
+
                                     <img src="assets/images/dislike.png" alt="">
-                                    
+
                                 </div>
                             </div>
 
@@ -107,64 +109,74 @@
 
 
 <style>
-    #pills-tab li{
+    #pills-tab li {
         position: relative;
     }
-/* Styling for the hover line */
-.hover-line {
-    position: absolute;
-    height: 2px;
-    background-color: #397df6;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    width: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 0;
-}
-/* Styling for hover effect */
-.nav-link:hover + .hover-line {
-  width: 70%;
-}
-ul#pills-tab {
 
-    padding-left: 50px;
+    /* Styling for the hover line */
+    .hover-line {
+        position: absolute;
+        height: 2px;
+        background-color: #397df6;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        width: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 0;
     }
-/* Styling for active tab */
-.nav-link.active + .hover-line {
-  width: 70%;
-}
 
-#pills-tab button.nav-link.active{
-    color: #397df6  !important;
-    background-color: transparent  !important;
-  
-}
-button#pills-home-tab,button#pills-profile-tab {
-    color: #000  !important;
-    background-color: transparent  !important;
-  
-}
-    .emoji{
+    /* Styling for hover effect */
+    .nav-link:hover+.hover-line {
+        width: 70%;
+    }
+
+    ul#pills-tab {
+
+        padding-left: 50px;
+    }
+
+    /* Styling for active tab */
+    .nav-link.active+.hover-line {
+        width: 70%;
+    }
+
+    #pills-tab button.nav-link.active {
+        color: #397df6 !important;
+        background-color: transparent !important;
+
+    }
+
+    button#pills-home-tab,
+    button#pills-profile-tab {
+        color: #000 !important;
+        background-color: transparent !important;
+
+    }
+
+    .emoji {
         display: flex;
-    gap: 10px;
+        gap: 10px;
     }
-    .emoji img{
-width: 40px;
+
+    .emoji img {
+        width: 40px;
     }
+
     button.button-10 {
         width: 190px;
     }
 
     .like {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-.button-10:hover {
-    color: white;
-}
+    .button-10:hover {
+        color: white;
+    }
+
     /* CSS */
     .button-10 {
         display: flex;
@@ -174,7 +186,6 @@ width: 40px;
         font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
         border-radius: 6px;
         border: none;
-
         color: #fff;
         background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
         background-origin: border-box;
@@ -218,7 +229,7 @@ width: 40px;
     .download-btn-menu {
         height: 480px;
         background: white;
-     
+
     }
 
     #closeButton1,
@@ -282,7 +293,6 @@ width: 40px;
         cursor: pointer !important;
         position: relative;
         overflow: hidden;
-
         background-color: #000000;
         width: 30%;
         align-items: center;
@@ -464,7 +474,6 @@ width: 40px;
     }
 
     .cdownload:hover {
-
         color: #fff;
     }
 
@@ -580,7 +589,6 @@ width: 40px;
         padding: 10px;
         text-align: left;
         width: 600px;
-
     }
 
     th {
